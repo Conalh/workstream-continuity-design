@@ -2,6 +2,8 @@
 
 **Canonical repository:** [github.com/Conalh/workstream-continuity-design](https://github.com/Conalh/workstream-continuity-design)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20837409.svg)](https://doi.org/10.5281/zenodo.20837409)
+
 > **The interface remembers where the work stands — at every switch.**
 
 **Workstream Continuity Design (WCD)** is a proposed HCI and product-design discipline for software in which people must repeatedly enter, leave, understand, supervise, and safely resume concurrent work carried by humans, services, and AI agents.
@@ -15,6 +17,12 @@ Its central question is:
 **[Workstream Continuity Design: Design Bible v0.5](./WORKSTREAM_CONTINUITY_DESIGN.md)**
 
 Public, non-peer-reviewed research edition · 23 June 2026 · Conal Hickey
+
+**Citable publication:** [Zenodo report record](https://zenodo.org/records/20837409) · DOI: [10.5281/zenodo.20837409](https://doi.org/10.5281/zenodo.20837409) · Version 0.5.3 · CC BY 4.0
+
+**Canonical PDF:** [WCD_Design_Bible_v0_5_3.pdf](https://zenodo.org/api/records/20837409/files/WCD_Design_Bible_v0_5_3.pdf/content)
+
+**GitHub release:** [v0.5 initial public research edition](https://github.com/Conalh/workstream-continuity-design/releases/tag/v0.5)
 
 ## Core proposal
 
@@ -91,15 +99,22 @@ Open an issue or discussion with a bounded objection, implementation result, rep
 
 | File | Purpose |
 |---|---|
+| [`CITATION.cff`](./CITATION.cff) | Machine-readable citation metadata for GitHub and citation tools |
+| [`CHANGELOG.md`](./CHANGELOG.md) | Version history and publication notes |
+| [`CONTRIBUTING.md`](./CONTRIBUTING.md) | Contribution routes for discussions, issues, and pull requests |
+| [`LICENSE.md`](./LICENSE.md) | CC BY 4.0 license notice for the research and documentation |
 | [`README.md`](./README.md) | Project orientation, research status, and contribution routes |
+| [`ROADMAP.md`](./ROADMAP.md) | Candidate implementation, research, and validation tracks |
 | [`WORKSTREAM_CONTINUITY_DESIGN.md`](./WORKSTREAM_CONTINUITY_DESIGN.md) | Full GitHub-readable Design Bible v0.5 |
 
 ## Citation
 
 ```text
-Hickey, Conal. 2026. Workstream Continuity Design: Design Bible v0.5.
-Public, non-peer-reviewed research edition, 23 June 2026.
+Hickey, Conal. 2026. Workstream Continuity Design: Design Bible.
+Version 0.5.3. Zenodo. https://doi.org/10.5281/zenodo.20837409
 ```
+
+For machine-readable citation metadata, see [`CITATION.cff`](./CITATION.cff).
 
 ## License
 
