@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WCD Reference Demonstrator</title>
+    <meta name="description" content="Synthetic experiment stimulus comparing a conventional activity feed with a Workstream Continuity Design orientation surface.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to demonstrator</a>
+    <header class="topbar">
+      <div>
+        <p class="kicker">Reference demonstrator</p>
+        <h1>Workstream Continuity Design</h1>
+      </div>
+      <nav aria-label="Repository links">
+        <a href="https://github.com/Conalh/workstream-continuity-design#readme">README</a>
+        <a href="https://github.com/Conalh/workstream-continuity-design/blob/main/WORKSTREAM_CONTINUITY_DESIGN.md">Design Bible</a>
+        <a href="https://doi.org/10.5281/zenodo.20837409">DOI</a>
+      </nav>
+    </header>
+
+    <main id="main" class="app-shell">
+      <section class="control-rail" aria-labelledby="controls-title">
+        <div>
+          <p class="section-label">Experiment</p>
+          <h2 id="controls-title">Switching stimulus</h2>
+          <p class="muted">Eight synthetic concurrent workstreams. Compare the activity-feed condition with the WCD orientation surface after rapid focus switches.</p>
+        </div>
+
+        <fieldset class="segmented" aria-label="Display condition">
+          <legend>Condition</legend>
+          <label>
+            <input type="radio" name="condition" value="feed" checked>
+            <span>Activity feed</span>
+          </label>
+          <label>
+            <input type="radio" name="condition" value="wcd">
+            <span>WCD surface</span>
+          </label>
+        </fieldset>
+
+        <div class="timer-box" aria-live="polite">
+          <div>
+            <span class="section-label">Switch cadence</span>
+            <strong id="timerLabel">Manual</strong>
+          </div>
+          <label for="cadence">Auto-switch every</label>
+          <select id="cadence">
+            <option value="0">Manual only</option>
+            <option value="30">30 seconds</option>
+            <option value="60" selected>60 seconds</option>
+            <option value="90">90 seconds</option>
+            <option value="random">Random 30-90 seconds</option>
+          </select>
+          <div class="button-row">
+            <button type="button" id="startSession">Start session</button>
+            <button type="button" id="nextSwitch">Switch now</button>
+          </div>
+        </div>
+
+        <ol id="streamList" class="stream-list" aria-label="Workstreams"></ol>
+      </section>
+
+      <section class="workspace" aria-labelledby="workspace-title">
+        <div class="workspace-header">
+          <div>
+            <p id="conditionLabel" class="section-label">Activity-feed condition</p>
+            <h2 id="workspace-title"></h2>
+          </div>
+          <div class="status-strip" aria-label="Current workstream markers">
+            <span id="stateChip"></span>
+            <span id="authChip"></span>
+            <span id="actorChip"></span>
+          </div>
+        </div>
+
+        <div id="feedCondition" class="condition-panel" aria-labelledby="feed-title">
+          <div class="panel-intro">
+            <h3 id="feed-title">Conventional activity feed</h3>
+            <p>Participants reconstruct goal, change, authority, actor chain, and next action from raw updates.</p>
+          </div>
+          <ol id="activityFeed" class="activity-feed"></ol>
+        </div>
+
+        <div id="wcdCondition" class="condition-panel" aria-labelledby="wcd-title" hidden>
+          <div class="panel-intro">
+            <h3 id="wcd-title">WCD orientation surface</h3>
+            <p>Each workstream projects the same nine-slot operating picture before the participant answers.</p>
+          </div>
+          <dl id="wcdGrid" class="wcd-grid"></dl>
+        </div>
+      </section>
+
+      <aside class="test-panel" aria-labelledby="test-title">
+        <div>
+          <p class="section-label">Measurement</p>
+          <h2 id="test-title">Switch probe</h2>
+          <p class="muted">Start a session, switch workstreams every 30-90 seconds, then submit the probe as soon as you are decision-ready.</p>
+        </div>
+
+        <form id="probeForm">
+          <label>
+            Goal
+            <select name="goal" required></select>
+          </label>
+          <label>
+            Meaningful change
+            <select name="change" required></select>
+          </label>
+          <label>
+            Next actor
+            <select name="actor" required></select>
+          </label>
+          <label>
+            Authorization state
+            <select name="auth" required></select>
+          </label>
+          <label>
+            Safe next action
+            <select name="next" required></select>
+          </label>
+          <fieldset class="ready-field">
+            <legend>Ready to commit?</legend>
+            <label><input type="radio" name="ready" value="yes" required> Yes</label>
+            <label><input type="radio" name="ready" value="no"> No</label>
+          </fieldset>
+          <button type="submit">Submit probe</button>
+        </form>
+
+        <div class="metrics" aria-live="polite">
+          <div><span>TTDR</span><strong id="ttdrMetric">--</strong></div>
+          <div><span>Accuracy</span><strong id="accuracyMetric">--</strong></div>
+          <div><span>False-ready</span><strong id="falseReadyMetric">0</strong></div>
+          <div><span>Contamination</span><strong id="contaminationMetric">0</strong></div>
+        </div>
+
+        <div id="lastResult" class="result-box" role="status">No probe submitted yet.</div>
+
+        <div class="button-row">
+          <button type="button" id="exportJson">Export JSON</button>
+          <button type="button" id="resetSession">Reset</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Measured locally in the browser. No participant data leaves this page unless exported manually.</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
