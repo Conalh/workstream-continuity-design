@@ -24,16 +24,6 @@ Public, non-peer-reviewed research edition · 23 June 2026 · Conal Hickey
 
 **GitHub release:** [v0.5 initial public research edition](https://github.com/Conalh/workstream-continuity-design/releases/tag/v0.5)
 
-**Reference demonstrator:** [synthetic WCD switching experiment](https://conalh.github.io/workstream-continuity-design/) ([source](./docs/index.html))
-
-Preview images:
-
-- [Conventional activity-feed condition](./docs/assets/demo-feed-condition.png)
-- [WCD orientation-surface condition](./docs/assets/demo-wcd-surface.png)
-- [Mobile WCD condition](./docs/assets/demo-mobile.png)
-- [Walkthrough video](./docs/assets/demo-walkthrough.mp4)
-- [Repository social preview image](./docs/assets/social-preview.png)
-
 ## Core proposal
 
 WCD treats **workstream continuity** as a product-level quality attribute and **Workstream Continuity Design** as the coordinating practice used to design for that attribute.
@@ -116,7 +106,6 @@ Open an issue or discussion with a bounded objection, implementation result, rep
 | [`README.md`](./README.md) | Project orientation, research status, and contribution routes |
 | [`ROADMAP.md`](./ROADMAP.md) | Candidate implementation, research, and validation tracks |
 | [`WORKSTREAM_CONTINUITY_DESIGN.md`](./WORKSTREAM_CONTINUITY_DESIGN.md) | Full GitHub-readable Design Bible v0.5 |
-| [`docs/index.html`](./docs/index.html) | Static reference demonstrator for the WCD switching experiment |
 
 ## Citation
 

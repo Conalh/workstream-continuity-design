@@ -4,7 +4,7 @@ This roadmap lists candidate tracks for turning Workstream Continuity Design fro
 
 ## 1. Reference prototype
 
-- Maintain the static concurrent-workstream supervision demonstrator in `docs/`.
+- Develop a future reference prototype only after its scope, publication status, and review path are explicit.
 - Represent the nine grammar slots as structured data, not only prose.
 - Show acquisition, rapid switching, stale return, blocked state, delegated action, denied authority, changed assumptions, and recovery.
 - Include a fixture set that makes failure modes reproducible.
