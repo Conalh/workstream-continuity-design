@@ -31,6 +31,7 @@ Preview images:
 - [Conventional activity-feed condition](./docs/assets/demo-feed-condition.png)
 - [WCD orientation-surface condition](./docs/assets/demo-wcd-surface.png)
 - [Mobile WCD condition](./docs/assets/demo-mobile.png)
+- [Walkthrough video](./docs/assets/demo-walkthrough.mp4)
 - [Repository social preview image](./docs/assets/social-preview.png)
 
 ## Core proposal
